@@ -2,7 +2,7 @@ import { forwardRef, ForwardedRef } from "react";
 import { motion } from "framer-motion";
 import {
   Settings,
-  History,
+  // History,
   EllipsisVertical,
   ChevronRight,
 } from "lucide-react";
@@ -28,10 +28,10 @@ export const SidebarButtons = forwardRef<HTMLDivElement, SidebarButtonsProps>(
       setHistoryOpen(false);
     };
 
-    const handleHistoryClick = () => {
-      setHistoryOpen(true);
-      setConfigOpen(false);
-    };
+    // const handleHistoryClick = () => {
+    //   setHistoryOpen(true);
+    //   setConfigOpen(false);
+    // };
 
     const closeAll = () => {
       setConfigOpen(false);
@@ -91,7 +91,7 @@ export const SidebarButtons = forwardRef<HTMLDivElement, SidebarButtonsProps>(
             >
               <Settings className="size-5" />
             </TooltipIconButton>
-            <TooltipIconButton
+            {/* <TooltipIconButton
               tooltip="History"
               variant="outline"
               size="icon"
@@ -103,7 +103,7 @@ export const SidebarButtons = forwardRef<HTMLDivElement, SidebarButtonsProps>(
               aria-label="History"
             >
               <History className="size-5" />
-            </TooltipIconButton>
+            </TooltipIconButton> */}
           </div>
         </div>
       </motion.div>

@@ -7,7 +7,7 @@ import {
   User,
   Loader2,
   TriangleAlert,
-  Settings,
+  // Settings,
 } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -40,21 +40,21 @@ export function NavUser() {
   // Use auth user if available, otherwise use default user
   const displayUser = authUser
     ? {
-        name: authUser.displayName || authUser.email?.split("@")[0] || "User",
-        email: authUser.email || "",
-        avatar: authUser.avatarUrl || "",
-        company: authUser.companyName || "",
-        firstName: authUser.firstName || "",
-        lastName: authUser.lastName || "",
-      }
+      name: authUser.displayName || authUser.email?.split("@")[0] || "User",
+      email: authUser.email || "",
+      avatar: authUser.avatarUrl || "",
+      company: authUser.companyName || "",
+      firstName: authUser.firstName || "",
+      lastName: authUser.lastName || "",
+    }
     : {
-        name: "Guest",
-        email: "Not signed in",
-        avatar: "",
-        company: "",
-        firstName: "",
-        lastName: "",
-      };
+      name: "Guest",
+      email: "Not signed in",
+      avatar: "",
+      company: "",
+      firstName: "",
+      lastName: "",
+    };
 
   const handleSignOut = async () => {
     try {
@@ -150,10 +150,10 @@ export function NavUser() {
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
 
-            <DropdownMenuItem onClick={() => router.push("/settings")}>
+            {/* <DropdownMenuItem onClick={() => router.push("/settings")}>
               <Settings className="mr-2 h-4 w-4" />
               Settings
-            </DropdownMenuItem>
+            </DropdownMenuItem> */}
 
             {isAuthenticated ? (
               <DropdownMenuItem
